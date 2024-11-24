@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan</title>
+</head>
+<body style="text-align: center; border-style: solid; border-width: medium;">
+    <div style="width: 500px; height: 500px; background-color: aliceblue; margin: auto;">
+    <h3>Loan application form</h3>
+    <h3 style="background-color: rgb(167, 132, 200);">Application Information</h3>
+    <label for="fname">First Name :</label>
+    <input type="text" id="fname" placeholder="Enter Name">
+    <br>
+    <label for="lname">Last name :</label>
+    <input type="text" id="name" placeholder="Enter Name">
+    <br>
+    <label for="email">Email :</label>
+    <input type="email" id="email" placeholder="Enter your email">
+    <br>
+    <label for="id">Social Security # :</label>
+    <input type="number" id="id" placeholder="Enter id" >
+    <br>
+    <label for="dnum">Daytime Phone :</label>
+    <input type="number" id="dnum" placeholder="Daytime ph no" maxlength="10">
+    <br>
+    <label for="enum">Evening phone :</label>
+    <input type="number" id="enum" placeholder="Evening ph no">
+    <br>
+    <br>
+    <h3 style="background-color: rgb(167, 132, 200);">Loan Information</h3>
+    
+    <label for="ltype">Loan Type :</label>
+    <select name="loantype" id="ltype" >
+        <option value="aumo">Automobile</option>
+        <option value="sowe">Software</option>
+        </select>
+        <br>
+        <label for="lamt">Loan Amount :</label>
+        <input type="number" id="lamt" placeholder="Amount">
+        <br>
+        <label for="Descr">Description :</label> 
+        <textarea name="area" id="Desce" rows="4" cols="20"> </textarea>
+        <br>
+        <label for="submit">Submit Application</label>
+        <button>Apply For Loan</button>
+    
+    </div>
+</body>
+</html>
