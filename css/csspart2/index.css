@@ -1,0 +1,97 @@
+/* universal selector */
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1,
+h3{
+    color: #b92b27;
+}
+
+/* id selector */
+#login{
+    background-color: white;
+}
+
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+
+/* class selector */
+.upvote{
+    background-color: green;
+    color: white;
+}
+
+/* descendent selector */
+.post a{
+    color: purple;
+    background-color: yellow;
+}
+
+nav a{
+    color: pink;
+}
+
+p+h3{
+    text-decoration: underline;
+}
+
+.upvote+button{
+    background-color: blueviolet;
+    color: darkblue;
+}
+
+div > input{
+    background-color: ghostwhite;
+}
+
+input[type="text"]{
+    color: red;
+}
+
+input[type="password"]{
+    color: green;
+}
+
+#myid{
+    color: green;
+}
+
+button:hover{
+    background-color: black;
+    color: red;
+}
+
+h3:hover{
+    text-decoration: none;
+}
+
+button:active{
+    background-color: pink;
+}
+
+p:active{
+    font-weight: bold;
+    color: green;
+}
+
+input[type="radio"]:checked + label{
+    font-weight: bold;
+    color: red;
+}
+
+h1::first-letter{
+    color: maroon;
+}
+p::selection{
+    background-color: blanchedalmond;
+}
+h3{
+    background-color: yellow;
+}
+h3{
+    background-color: greenyellow;
+}
+

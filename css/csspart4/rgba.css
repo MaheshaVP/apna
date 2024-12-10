@@ -1,0 +1,53 @@
+section{
+    margin-top: 100px;
+
+}
+
+div{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #7aa874;
+    border: 2px solid black;
+    margin: 10px auto;
+}
+
+div:nth-last-of-type(2n){
+    background-color: #f7db6a;
+
+}
+
+div:nth-last-of-type(3n){
+    background-color: #ebb02d;
+}
+
+/* transform */
+
+#one{
+    transform: rotate(+20deg);
+}
+#two{
+    transform: scaleY(0.5);
+}
+
+#three{
+    transform: translateX(100px);
+}
+
+#four{
+    transform: skew(30deg);
+}
+
+#five{
+    transform: rotate(30deg)translate(150px);
+}
+
+#shadow{
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+    margin-top: 100px;
+    text-align: center;
+    background-color: green;
+    box-shadow: 2px 2px 8px yellow;
+}

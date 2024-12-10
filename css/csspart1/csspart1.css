@@ -1,0 +1,71 @@
+div5{
+    text-align: center;
+    color: #ffa511;
+    font-family: League spartan;
+    font-weight: 900;
+    font-size: 55px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-decoration:double skyblue underline;
+    text-transform: uppercase;
+}
+
+div1{
+    h2{
+        color: rgb(255, 255, 0);
+    }
+    h1{
+        color: orange;
+    }
+    p{
+        color: white;
+        background-color: black;
+        line-height: normal;
+    }
+    button{
+        color: white;
+        background-color: blue;
+    }
+}
+
+div2{
+    h1{
+        text-align: center;
+        text-decoration:wavy red underline;
+        font-family: copperplate;
+    }
+    h3{
+        text-align: start;
+        font-weight: 600;
+        text-decoration:dotted green line-through;
+        letter-spacing: 5px;
+
+    }
+    p{
+        text-align: justify;
+        font-weight: 400;
+        line-height: 1;
+        width: 100%;
+        font-size: 15px;
+    }
+    a{
+        text-decoration: none;
+    }
+    h2{
+        font-weight: 800;
+        text-decoration: double blue underline;
+    }
+}
+
+div4{
+    h1{
+        color: aquamarine;
+    }
+    p{
+        color: blue;
+    }
+    button{
+        color: aqua
+        ;
+    }
+}
