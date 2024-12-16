@@ -129,9 +129,9 @@ a{
     border-radius: 100px;
     color: black;
     padding: 0.25rem 1rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-top: 0.5rem;
-    height: 1.5rem;
+    height: 2rem;
     width: fit-content;
 }
 
@@ -222,16 +222,46 @@ a{
 
 .album {
     width: 25%;
-    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-icon {
+    height: 1.75rem;
+    margin-right: 1rem;
+    opacity: 0.8;
+}
+
+.album-icon:hover {
+    opacity: 1;
+}
+
+.album-img {
+    border-radius: 5px;
+    margin-left: -6px;
+}
+
+.text {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 1rem;
+}
+
+.text1 {
+    font-size: 1rem;
+    font-weight: 500;
+    font-weight: 800;
+}
+
+.text2 {
+    margin-top: -0.6rem;
+    font-size: 0.85rem;
+    opacity: 0.9;
 }
 
 .player {
     width: 50%;
-}
-
-.controls {
-    width: 25%;
-    background-color: yellow;
 }
 
 .player-controls {
@@ -276,4 +306,26 @@ a{
     background-color: #1bd760;
     border-radius: 50%;
     margin-top: -6px;
+}
+
+.controls {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.control-icons {
+    height: 1.25rem;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+
+.control-icons:hover {
+    opacity: 1;
+}
+
+.volume {
+    width: 100px;
 }
