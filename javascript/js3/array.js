@@ -54,3 +54,4 @@ if(arr1.indexOf(item) !=-1) {
 let arr2 = [1,2,3,4,6];
 arr2[-1];
 console.log(arr2);
+
