@@ -121,3 +121,18 @@ for (let i=0;i<student.length;i++){
         console.log(student[i][j]);
         }
 }
+
+//for of loop
+for(char of "college") {
+    console.log(char);
+}
+
+//nested of loops
+let hero = [["ironman","spyderman","thor"],["superman","wonder man","flash"]];
+for (list of hero){
+    for(names of list){
+        console.log(names);
+    }
+}
+
+//
