@@ -53,9 +53,27 @@ function rollDice () {
 function printName1 (name,age) {
     console.log(`${name}'s age is ${age}.`);
 }
-printName1("Mahesh",21);
+// printName1("Mahesh",21);
+
 
 function sum (a,b) {
     console.log(a+b);
 }
-sum(2,3);
+// sum(2,3);
+
+
+//practice qs4 average of 3 numbers
+function calcAvg (a,b,c) {
+    let avg = (a+b+c)/3;
+    console.log(avg);
+} 
+// calcAvg(4,6,8);
+
+//print multiplication table of a number
+function printTable (n) {
+    for(let i=n; i<=n*10; i+=n) {
+    console.log(i);
+    }
+}
+printTable(22);
+
