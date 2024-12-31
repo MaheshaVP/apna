@@ -75,5 +75,52 @@ function printTable (n) {
     console.log(i);
     }
 }
-printTable(22);
+// printTable(22);
 
+//return value
+function sum1(a,b) {
+    console.log("Hello");
+    return a+b;
+}
+
+
+// console.log(sum1(1,3));
+
+
+function isAdult1(age) {
+    if(age >= 18){
+        return "adult";
+    }else{
+        return "not adult";
+    }
+    console.log("bye bye");
+
+}
+// console.log(isAdult1(21));
+
+//practice qs3 return sum of numbers from 1 to n
+function getsum(n) {
+    let sum = 0;
+
+    for(let i=1;i<=n;i++) {
+        sum += i;
+    }
+    return sum;
+}
+// console.log(getsum(18));
+
+
+//practice qs4 return concatenation of strings
+let str = ["hi","hello","bye","!"];
+
+function concat(str) {
+    let result = " ";
+
+    for(let i=0; i<str.length ;i++) {
+        result += str[i];
+    }
+
+    return result;
+}
+
+console.log();
