@@ -186,6 +186,7 @@ function changeGreet () {
 changeGreet();
 
 
+
 let name = "Mahesh";
 
 let sum4 = function(a,b) {
@@ -196,9 +197,65 @@ sum4(2,6);
 
 let helllo = function() {
     console.log("hello Mahesh");
+
 }
 
 helllo = function() {
     console.log("namaste");
 }
+
+//High order function
+
+function multipleGreet (func,count) {  //higher order function
+    for (let i=1;i<=count;i++) {
+        func();
+    }
+}
+
+let greet1 = function () {
+    console.log("hello");
+}
+
+// multipleGreet(greet1,5);
+
+//Higher order functions
+function oddOrEvenTest (request) {
+    if(request == "odd") {
+        let odd = function(n) {
+            console.log(!(n%2==0));
+        }
+        return odd;
+    }else if (request == "even") {
+        let even = function(n) {
+            console.log(n%2 == 0);
+        }
+        return even;
+    }else{
+        console.log("wrong req");
+    }
+}
+
+let request = "even"; //odd
+oddOrEvenTest("odd");
+
+//Methods
+const calculator = {
+    num: 45,
+    add: function (a,b) {
+        return a+b
+    },
+    sub: function (a,b) {
+        return a-b
+    },
+    mul: function (a,b) {
+        return a*b
+    }
+
+};
+
+
+
+
+
+
 
