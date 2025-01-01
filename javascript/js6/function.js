@@ -123,4 +123,82 @@ function concat(str) {
     return result;
 }
 
-console.log();
+// console.log(str);
+
+
+
+//scope
+let sum3 = 54; //global scope
+
+function calSum(a,b) {
+    let sum3 = a+b;    //function scope
+    // console.log(sum3);
+}
+calSum(1,2);    
+// console.log(sum3);
+
+//block scope
+for (let i=1;i<=5;i++){
+    // console.log(i);
+}
+
+
+//just practice
+
+// let age3 = 18;
+// if(age3 >= 18) {
+//     let char = 'A';
+//     console.log(char);
+// }else{
+//     let char = 'C';
+//     console.log(char);
+// }
+
+
+//lexical scope
+function outerFunc () {
+    let x = 5;
+    let y = 6;
+    function innerFunc () {
+        let a =10;
+        // console.log(x);
+        // console.log(y);
+    }
+    innerFunc();
+    console.log(a); 
+}
+
+
+
+//practice qs5 
+
+let greet = "Hello"; //global scope
+
+function changeGreet () {
+    let greet = "Namaste";  //function scope
+    // console.log(greet);
+    function innerGreet () {
+        // console.log(greet);  //lexical scope
+    }
+    innerGreet();
+}
+// console.log(greet);
+changeGreet();
+
+
+let name = "Mahesh";
+
+let sum4 = function(a,b) {
+    return a+b;
+}
+sum4(2,6);
+
+
+let helllo = function() {
+    console.log("hello Mahesh");
+}
+
+helllo = function() {
+    console.log("namaste");
+}
+
