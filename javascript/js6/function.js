@@ -254,6 +254,9 @@ const calculator = {
 };
 
 
+//practice qs
+
+
 
 
 
