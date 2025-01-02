@@ -41,5 +41,31 @@ const pow = (a,b) => {
 
 
 const hello = () => {
-    console.log("Hello");
+    console.log("Hello world");
 }
+
+//arrow function
+const mul = (a,b) => {
+  return  a*b;
+};
+
+//set timeout
+console.log("Hi there!");
+
+setTimeout(() => {
+    console.log("apna college");
+}, 2000);
+
+console.log("welcome to");
+
+
+//set interval
+console.log("Hi there!");
+
+let id = setInterval(() => {
+    console.log("apna college");
+}, 2000);
+
+console.log(id);
+
+//
