@@ -116,3 +116,75 @@ let min = nums2.reduce((min,el) => {
 
 console.log(min);
 }
+
+//default parameters
+function sum(a,b=2) {
+    return a+b;
+}
+// console.log(sum(5,6));
+
+//spread arrray
+let arr4 = [1,2,3,4,5];
+let newArr = [...arr4];
+
+
+let chars = [..."hello"];
+
+let odd = [1,3,5,7,9];
+let even = [2,4,6,8];
+
+let nums1 = [...odd, ...even];
+
+//spread with object literals
+const data = {
+    email : "ironman@gmail.com",
+    password : "abcd",
+};
+
+const datacopy = {...data, id:123};
+
+let arr5 = [1,2,3,4,5];
+let obj1 = {..."hello"};
+
+
+
+function sum(...arg) {
+    for (let i=0;i<arg.length;i++) {
+        console.log("you gave us : ",arg);
+    }
+}
+
+function min(msg,...args) {
+    console.log(msg);
+    return args.reduce((min,el) => {
+        if(min>el) {
+            return el;
+        }else{
+            return min;
+        }
+    })
+}
+
+function sum1 (...args) {
+    return args.reduce((sum,el) => sum+el);
+}
+
+//  Destructing
+let names = ["tony","bruce","peter","steve","abc","xyz"];
+// let winner = names[0];
+// let runnerup = names[1];
+let [winner,runner,secondRunner,...others] = names;
+console.log(names);
+
+const student2 = {
+    name : "karan",
+    age : 28,
+    class : 9,
+    subjects : ["hindi","english","maths","science"],
+    username : "@karan",
+    password : "abcd"
+};
+
+let {username:user,password:pass} = student2;
+
+
