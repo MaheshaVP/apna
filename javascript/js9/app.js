@@ -19,7 +19,7 @@ console.dir(document.querySelectorAll("div a"));
 let links = document.querySelectorAll(".box a");
 
 for(let i=0;i<links.length;i++) {
-    links[i].style.color = "yellow";
+    links[i].style.color = "red";
 }
 
 let head = document.getElementsByTagName("h1");
@@ -28,4 +28,7 @@ head[0].style.color = "green";
 // for (link of links) {
 //     link.style.color = "purple";
 // }
+
+
+//Navigation
 
