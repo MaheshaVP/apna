@@ -35,11 +35,24 @@ for(btn of btns) {
 
 }
 
-function sayHello () {
-   alert ("Hello");
-}
+// function sayHello () {
+//    alert ("Hello");
+// }
 
-function sayName () {
-    alert ("Nrupathunga University");
-}
+// function sayName () {
+//     alert ("Nrupathunga University");
+// }
 
+
+
+let p = document.querySelector("p");
+
+p.addEventListener("click", function() {
+    console.log("paragraph clicked")
+})
+
+let box = document.querySelector(".box");
+
+box.addEventListener("mouseenter",function() {
+    console.log("mouse inside box");
+})
