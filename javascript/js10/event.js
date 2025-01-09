@@ -33,6 +33,7 @@ let inp = document.querySelector("input");
 // });
 
 inp.addEventListener("keyup", function(events) {
+    // console.dir(inp);
     console.log("key = ",events.key);
     console.log("code = ",events.code);
 
