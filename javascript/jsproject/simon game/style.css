@@ -40,3 +40,23 @@ body{
 .userflash{
     background-color: rgb(6, 6, 6);
 }
+
+/* Tablet view (768px and below) */
+@media (max-width: 768px) {
+    .btn {
+        height: 140px;
+        width: 140px;
+    }
+    .btn-container {
+        margin: 0 auto;
+    }
+}
+
+/* Mobile view (480px and below) */
+@media (max-width: 480px) {
+    .btn {
+        height: 100px;
+        width: 100px;
+        margin: 0.5rem;
+    }
+}
