@@ -1,14 +1,19 @@
 
 
 function Title() {
-    return <h1>Im the boss</h1>
-    sum(5,8);
+
+  let msg = "Good morning boss";
+  let name = "mahesh";
+    return <div>
+      {/* <h1>Im the boss</h1>
+      <h3>I am the description</h3> */}
+
+      <p>2*2 = {2*2}</p>
+
+     <p>the msg is {msg}</p>
+
+     <h2>the name is {name.toUpperCase()}</h2>
+    </div>
   }
 
-  function sum(a,b) {
-    return a+b;
-  }
-
-
-
-    export default Title;
+  export default Title;
