@@ -5,9 +5,8 @@ function App() {
 
   return (
     <>
-    
+    <h1>Block buster deels | shop now</h1>
       <ProductTab/>
-      {/* <ProductTab/> */}
     </>
   )
 }
