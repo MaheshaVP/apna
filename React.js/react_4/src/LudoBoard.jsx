@@ -8,8 +8,8 @@ export default function LudoBoard() {
 
     let updateBlue = () => {
         // console.log(`moves.blue = ${moves.blue}`);
-        setMoves((curr) => {
-            return {...curr,blue:curr.blue + 1};
+        setMoves((preMoves) => {
+            return {...preMoves,blue:preMoves.blue + 1};
         });
     
         SetArr((preArr)=>{return[...preArr,"blue moves"]});
