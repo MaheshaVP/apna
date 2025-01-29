@@ -1,14 +1,25 @@
 import { useState } from "react";
 
 export default function Counter () {
-   let [stateVariable,setStateVariable] = useState(20);
-    let [count , setCount] = useState(0);
+    let [count , setCount] = useState(0); //initialization
+    // console.log("componant rendered");
+    // console.log(`count = ${count}`);
+    // console.log(count);
+
 
     let incCount=()=> {
-        setCount(count+=1);
-        // console.log(count);
-    }
+        // setCount((currCount)=> {
+        //     return currCount + 1;
+        // });
+        // setCount((currCount)=> {
+        //     return currCount + 1;
+        // });
+    
+    setCount(count + 1);
+        // setCount(count+1);
+        // console.log(`inside isccount , count = ${count}`)
 
+    }
 
     return(
         <div>
@@ -17,3 +28,4 @@ export default function Counter () {
         </div>
     );
 }
+

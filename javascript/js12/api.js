@@ -41,11 +41,11 @@ async function getFacts() {
     try{
         let res = await fetch(url2);
         let data = await res.json();
-        console.log("data = ",data.fact);
+        console.log("data = ",data.length);
 
-        let res2 = await fetch(url2);
-        let data2 = await res2.json();
-        console.log("data2 = ",data2.fact);
+        // let res2 = await fetch(url2);
+        // let data2 = await res2.json();
+        // console.log("data2 = ",data2.fact);
     }catch(e) {
         console.log("error - ",e);
     }   

@@ -2,7 +2,7 @@
 import './App.css'
 import Counter from './Counter'
 import LikeButton from './LikeButton'
-// import Button from './Button'
+import Button from './Button'
 // import Form from './Form'
 
 function App() {
@@ -11,13 +11,14 @@ function App() {
     <>
   <h1>States in react</h1>
 
-    <LikeButton/>
-    
-    {/* <Counter/> */}
+    {/* <LikeButton/> */}
+
+    <Counter/>
 
 {/* <Form/>
     <hr />
     <Button/> */}
+    <Button/>
     </>
   )
 }
