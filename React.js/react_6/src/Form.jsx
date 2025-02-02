@@ -31,6 +31,7 @@ export default function Form() {
         });
     };
 
+
     let handleSubmit = (event) => {
         event.preventDefault();
         console.log(formData);
