@@ -5,9 +5,11 @@ function App() {
   return (
     <div>
 
-      <Lottery/>
+      <Lottery n={3} winningSum={15}/>
 
     </div>
   );
 }
 export default App;
+
+
