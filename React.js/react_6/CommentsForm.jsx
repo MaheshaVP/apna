@@ -1,15 +1,77 @@
+import { useState } from "react"
+
 export default function CommentsForm() {
+    let [formData,setFormData] = useState({
+        username : "",
+        remarks: "",
+        rating : 5,
+    })
+     
+    let handleInputChange = (event) => {
+        setFormData((currData) => {
+            return {...currData,[event.target.name]:[event.target.value]}
+        })
+    }
+
+
+    let handleSubmit = (event) => {
+        console.log(formData);
+        event.preventDefault();
+        setFormData({
+            username : "",
+        remarks: "",
+        rating : 5,
+        })
+    }
+
+    let handleReset = (event) => {
+        event.preventDefault();
+        setFormData({
+            username : "",
+            remarks: "",
+            rating : 5,
+        })
+    }
+
     return(
         <div>
         <h4>Give a Comment</h4>
-        <br />
-        <input type="text" placeholder="username" />
+
+        <form onSubmit={handleSubmit}>
+
+        <label htmlFor="username">UserName </label>
+        <input type="text" 
+        placeholder="username" 
+        value={formData.username} 
+        onChange={handleInputChange}
+        name="username"
+        id="username"/>
         <br /><br />
-        <textarea placeholder="Remarks"></textarea>
+
+        <label htmlFor="remarks">Remarks </label>
+        <textarea
+         placeholder="add few Remarks" 
+         value={formData.remarks}
+         onChange={handleInputChange}
+         name="remarks"
+         id="remarks">Remarks </textarea>
         <br /><br />
-        <input type="number" placeholder="rating" />
+
+        <label htmlFor="rating">Rating </label>
+        <input type="number" 
+        placeholder="rating" 
+        min={1} 
+        max={5}
+        value={formData.rating}  
+        onChange={handleInputChange}
+        name="rating"
+        id="rating"/>
         <br /><br />
+
+        <button onClick={handleReset}>Reset</button>
         <button>Add Comment</button>
+        </form>
+        
         </div>
     )
 }
