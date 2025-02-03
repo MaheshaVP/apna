@@ -1,12 +1,14 @@
 import { useState } from "react"
 
-export default function CommentsForm() {
+export default function CommentsForm({addNewComment}) {
     let [formData,setFormData] = useState({
         username : "",
         remarks: "",
         rating : 5,
     })
-     
+    
+    let [isvalid,setIsValid] = useState(true);
+
     let handleInputChange = (event) => {
         setFormData((currData) => {
             return {...currData,[event.target.name]:[event.target.value]}
@@ -15,7 +17,15 @@ export default function CommentsForm() {
 
 
     let handleSubmit = (event) => {
+
+        if(!formData.username) {
+            console.log("user name is null");
+            setIsValid(false);
+            event.preventDefault();
+            return;
+        }
         console.log(formData);
+        addNewComment(formData);
         event.preventDefault();
         setFormData({
             username : "",
@@ -46,6 +56,7 @@ export default function CommentsForm() {
         onChange={handleInputChange}
         name="username"
         id="username"/>
+        {!isvalid && <p style={{color:"red"}}>username cannot be empty</p>}
         <br /><br />
 
         <label htmlFor="remarks">Remarks </label>
@@ -69,9 +80,11 @@ export default function CommentsForm() {
         <br /><br />
 
         <button onClick={handleReset}>Reset</button>
+        &nbsp;
         <button>Add Comment</button>
         </form>
         
         </div>
     )
 }
+
