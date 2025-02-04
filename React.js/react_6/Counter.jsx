@@ -1,37 +1,38 @@
-// import { useState } from "react"
-
-import { useState } from "react"
-
-// export default function Counter() {
-//     let [count,setCount] = useState(0);
-
-//     let incCount = () => {
-//         setCount(count + 1);
-//     }
-
-//     return (
-//         <div>
-//             <h3>Count = {count}</h3>
-//             <button onClick={incCount}>+1</button>
-//         </div>
-//     )
-// }
+import { useEffect, useState } from "react"
 
 export default function Counter() {
-    let [count,setCount] = useState(0);
+    let [countx,setCountx] = useState(0);
+        let [county,setCounty] = useState(0);
 
-    let incCount = () => {
-        setCount(currCount => currCount + 1);
+
+    let incCountx = () => {
+        setCountx(currCount => currCount + 1);
     }
 
-    // function incCount () {
-    //     setCount(count+1);
-    // }
+    
+    let incCounty = () => {
+        setCounty(currCount => currCount + 1);
+    }
+
+    useEffect(function printSomething() {
+        console.log("this is the side effect");
+    },[]);
+
+    let reset = () => {
+        setCountx(0);
+        setCounty(0);
+    }
 
     return (
         <div>
-            <h3>count = {count}</h3>
-            <button onClick={incCount}>+1</button>
+            <h3>countx = {countx}</h3>
+            <button onClick={incCountx}>+1</button>
+            &nbsp;&nbsp;
+            <h3>county = {county}</h3>
+            <button onClick={incCounty}>+1</button>
+            <br /><br />
+            <button onClick={reset}>Reset</button>
         </div>
     )
 }
+
