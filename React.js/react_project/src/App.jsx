@@ -1,14 +1,10 @@
-// import './App.css'
-
-import MaterialUI from "./MaterialUI"
-
+import './App.css'
+import SearchBox from './Searchbox'
 
 function App() {
   return(
     <div>
-
-      
-      {/* <MaterialUI/> */}
+      <SearchBox/>
     </div>
   )
 }
