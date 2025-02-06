@@ -6,3 +6,11 @@
     display: flex;
     justify-content: center;
 }
+
+.InfoBox p:hover{
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 1rem;
+    transform: scale(1.0);
+    opacity: 1;
+}

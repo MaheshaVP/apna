@@ -2,3 +2,8 @@
     text-align: center;
     margin-bottom: 15px;
 }
+
+button.btn:hover{
+    border-color:2px solid white;
+    filter: drop-shadow(0 0 1em #646cffaa);
+}

@@ -64,7 +64,7 @@ export default function SearchBox({updateInfo}) {
              value={city} 
              onChange={handleChange}/>
             <br /><br />
-            <Button variant="contained" type='submit'>
+            <Button variant="contained" type='submit' className='btn'>
             Search
             </Button>
             {error && <p style={{color:"red"}}>No such place found in our API</p>}
