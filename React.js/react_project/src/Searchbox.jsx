@@ -4,18 +4,21 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 
 
-export default function SearchBox() {
-    let [city,setCity] = useState(" ");
+export default function SearchBox({updateInfo}) {
+    let [city,setCity] = useState("");
+    let [error,setError] = useState(false);
     let API_URL = "https://api.openweathermap.org/data/2.5/weather";
     let API_KEY = "e898d24789628501dd17c483f3e9f1fb";
 
     let getWeatherInfo = async() => {
-       let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
+        try{
+            let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
        let jsonResponse = await response.json();
        console.log(jsonResponse);
 
        let result = {
-        name : jsonResponse.name,
+        city : city,
+        feelslike : jsonResponse.main.feels_like,
         temp : jsonResponse.main.temp,
         pressure : jsonResponse.main.pressure,
         tempMax : jsonResponse.main.temp_max,
@@ -23,8 +26,13 @@ export default function SearchBox() {
         humidity : jsonResponse.main.humidity,
         weather : jsonResponse.weather[0].description,
         Country : jsonResponse.sys.country,
+        WindSpeed : jsonResponse.wind.speed,
        }
        console.log(result);
+       return result;
+        }catch(err) {
+            throw err;
+        }
     }
 
    
@@ -32,16 +40,21 @@ export default function SearchBox() {
         setCity(evt.target.value);
     };
 
-    let handleSubmit = (event) => {
-        event.preventDefault();
+    let handleSubmit = async(event) => {
+        try{
+            event.preventDefault();
         console.log(city);
         setCity("");
-        getWeatherInfo();
+        let newinfo = await getWeatherInfo();
+        updateInfo(newinfo);
+        }catch(err) {
+            setError(true);
+        }
+        
     };
 
     return(
         <div className='SearchBox'>
-            <h3>Search for the Weather</h3>
             <form  onSubmit={handleSubmit}>
             <TextField 
             id="city" 
@@ -52,9 +65,10 @@ export default function SearchBox() {
              onChange={handleChange}/>
             <br /><br />
             <Button variant="contained" type='submit'>
-            Send
+            Search
             </Button>
-
+            {error && <p style={{color:"red"}}>No such place found in our API</p>}
+            
             </form>
         </div>
     )
