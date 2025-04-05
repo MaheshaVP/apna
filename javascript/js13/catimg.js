@@ -1,5 +1,5 @@
 //dog image
-let btn = document.querySelector("button");
+let btn1 = document.querySelector("button");
 
 let url1 = "https://dog.ceo/api/breeds/image/random"
 
