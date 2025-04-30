@@ -48,3 +48,18 @@ if myfunction():
     print("ok")
 else:
     print("not ok")
+
+
+#function boolean
+def myFunction() :
+    return True
+
+print(myFunction())
+
+def myFunction() :
+    return True
+
+if myfunction():
+    print("yes")
+else:
+    print("no")
