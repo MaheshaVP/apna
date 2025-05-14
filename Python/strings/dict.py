@@ -161,6 +161,3 @@ vehicle = {
 }
 print(vehicle)
 print('\n')
-
-
-
