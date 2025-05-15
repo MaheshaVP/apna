@@ -82,7 +82,7 @@ def tri_recursion(k):
   return result
 
 print("Recursion Example Results:")
-tri_recursion(6)
+tri_recursion(3)
 print('\n')
 
 
@@ -103,3 +103,23 @@ def fact(x):
         return x * fact(x-1)
 factorial = fact(3)
 print(factorial)
+print('\n')
+
+#lambda
+x = lambda a : a+10
+print(x(6) ,'\n')
+
+x = lambda a,b:a*b
+print(x(4,5),'\n')
+
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2),'\n')
+
+#using function
+def function(n):
+    return lambda a: a*n
+doubler = function(2)
+tripler = function(3)
+print(doubler(8) ,'\n')
+print(tripler(8),'\n')
+    
