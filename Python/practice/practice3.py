@@ -247,4 +247,9 @@ print(cars)
 
 cars.remove("volvo")
 print(cars)
+print('\n')
 
+class myClass:
+    x=5
+p1 = myClass()
+print(p1.x)
