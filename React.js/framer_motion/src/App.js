@@ -1,9 +1,10 @@
 import { render } from "@testing-library/react";
-import React from "react";
 import Basicsofmotion from './Basicsofmotion'
+import Gestures from "./Gestures";
 
 export default function App () {
-  render(
-    <Basicsofmotion />
+  return(
+    // <Basicsofmotion />
+    <Gestures />
   )
 }
