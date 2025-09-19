@@ -41,7 +41,7 @@ else:
 
 #nested if
 
-age = 21
+age = 16
 print("Age : "+ str(age))
 
 if age < 13:
